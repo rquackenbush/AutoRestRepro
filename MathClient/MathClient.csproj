@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>annotations</Nullable>
+	<LangVersion>11.0</LangVersion>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Core" Version="1.32.0" />
+		<PackageReference Include="Microsoft.Azure.AutoRest.CSharp" Version="3.0.0-beta.20230525.4" PrivateAssets="All" />
+	</ItemGroup>
+
+</Project>

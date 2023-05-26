@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "AutoRestTest.Api",
+      "version": "1.0"
+    },
+    "paths": {
+      "/Math": {
+        "post": {
+          "tags": [
+            "Math"
+          ],
+          "operationId": "Add",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddRequest"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddRequest"
+                }
+              },
+              "application/*+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddRequest"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AddResponse"
+                  }
+                },
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AddResponse"
+                  }
+                },
+                "text/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AddResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "AddRequest": {
+          "type": "object",
+          "properties": {
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "nullable": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "AddResponse": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
