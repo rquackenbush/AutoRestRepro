@@ -1,4 +1,4 @@
-# AutoTestRepro
+# AutoRest Repro
 
 This code reproduces an issue where the `[CodeGenSuppressType]` appears to be ignored.
 
