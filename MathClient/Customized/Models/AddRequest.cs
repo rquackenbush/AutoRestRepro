@@ -1,11 +1,10 @@
 ﻿using Azure.Core;
 
 [assembly: CodeGenSuppressType("AddRequest")]
-
 namespace MathClient.Models
 {
-    public class AddRequest
+    public partial class AddRequest
     {
-        public int[] Values { get; set; }
+        public IList<int> Values { get; set; }
     }
 }
