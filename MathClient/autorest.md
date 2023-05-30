@@ -8,6 +8,7 @@ skip-csproj: true
 clear-output-folder: true
 override-client-name: MathClient
 generation1-convenience-client: true
+output-folder: $(this-folder)/Generated
 # csharpgen:
 #   attach: true 
 ```
